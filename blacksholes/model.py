@@ -24,7 +24,8 @@ class BlackSholesModel:
     def get_d1(self):
         """
         Returns the conditional probability. 
-        If the spot price at maturity date is above the strike price, what is relation between
+        If the spot price at maturity date is above 
+        the strike price, what is relation between
         the expected value to the current spot value
         """
 
@@ -38,7 +39,8 @@ class BlackSholesModel:
 
     def get_d2(self):
         """
-        Returns the probability that the option is ITM, i.e. buy the security below its market value
+        Returns the probability that the option is ITM, 
+        i.e. buy the security below its market value
         """
 
         if self.d2:
@@ -52,7 +54,8 @@ class BlackSholesModel:
 
     def get_call_price(self, round_d):
         """
-            Returns the estimated price of a call option 
+            Returns the estimated price of a call option
+            and rounds it r to round_d decimals
         """
 
         d1 = self.get_d1()
@@ -69,7 +72,8 @@ class BlackSholesModel:
 
     def get_put_price(self, round_d):
         """
-            Returns the estimated price of a put option 
+            Returns the estimated price of a put option
+            and rounds it r to round_d decimals
         """
 
         d1 = self.get_d1()
